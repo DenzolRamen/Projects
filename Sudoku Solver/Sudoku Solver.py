@@ -1084,7 +1084,7 @@ frame9_entry8.grid(row=2, column=1, ipadx=1)
 frame9_entry9.grid(row=2, column=2, ipadx=1)
 
 # Solve button
-buttonSolve = Button(frame10, text='Solve Sodoku!', background='#C0C0C0', command=getArray)
+buttonSolve = Button(frame10, text='Solve Sudoku!', background='#C0C0C0', command=getArray)
 buttonSolve.grid(row=0, column=0,ipadx=20)
 
 # Clear button
