@@ -42,7 +42,7 @@ def usedInBox(array, row, col, num):
 def is_safe(array, row, col, num):
 	return not usedInRow(array, row, num) and not usedInCol(array, col, num) and not usedInBox(array, row-row%3, col-col%3, num)
 
-def solveSodoku(array):
+def solveSudoku(array):
 	#array = getArray()
 
 	'''
@@ -82,7 +82,7 @@ def solveSodoku(array):
 			array[row][col] = num
 
 			# return if sucessful
-			if solveSodoku(array):
+			if solveSudoku(array):
 				return True
 
 			# If fail
@@ -307,12 +307,12 @@ def getArray():
 		messagebox.showerror(title='Error!', message='Enter integer values only!')
 
 	if condition == True:
-		solveSodoku(mainArray)
+		solveSudoku(mainArray)
 	if condition == False:
 		pass
 
-	print(solveSodoku(mainArray))
-	if solveSodoku(mainArray):
+	print(solveSudoku(mainArray))
+	if solveSudoku(mainArray):
 
 		frame1_entry1.delete(0, END)
 		frame1_entry2.delete(0, END)
